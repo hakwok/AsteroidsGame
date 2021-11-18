@@ -20,15 +20,15 @@ public void draw()
 }
 public void keyPressed()
 {
-  if(key == 'a'){
-    sway.turn(-5);
-  }else if(key == 'd'){
-    sway.turn(5);
-  }else if(key == 'w'){
+  if(key == 'a' | key == 'A'){
+    sway.turn(-10);
+  }else if(key == 'd' | key == 'D'){
+    sway.turn(10);
+  }else if(key == 'w' | key == 'W'){
     sway.accelerate(0.3);
-  }else if(key == 's'){
+  }else if(key == 's' | key == 'S'){
     sway.accelerate(-0.3);
-  }else if(key == 'h'){  
+  }else if(key == 'h' | key == 'H'){  
     sway.hyperspace();
   }
 }
