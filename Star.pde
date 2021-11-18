@@ -11,4 +11,8 @@ class Star
     fill(myColor);
     ellipse(myX, myY, 5, 5);
   }
+  public void move(){
+    myX = (int)(Math.random()*500);
+    myY = (int)(Math.random()*500);
+  }
 }
