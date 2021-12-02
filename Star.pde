@@ -1,36 +1,18 @@
-Star [] silly = new Star[200];
-Spaceship sway = new Spaceship();
-public void setup() 
+class Star
 {
-  size(500, 500);
-  background(0);
-  for(int i = 0; i < silly.length; i++){
-    silly[i] = new Star();
+  private int myX, myY, myColor;
+  public Star(){
+    myX = (int)(Math.random()*500);
+    myY = (int)(Math.random()*500);
+    myColor = color((int)(Math.random()*256+100), (int)(Math.random()*256+100), (int)(Math.random()*256+100));
   }
-  
-}
-public void draw()
-{
-  background(0);
-  sway.show();
-  sway.move();
-  for(int i = 0; i < silly.length; i++){
-    silly[i].show();
-    frameRate(3);
-    silly[i].move();
+  public void show(){
+    noStroke();
+    fill(myColor);
+    ellipse(myX, myY, 5, 5);
   }
-}
-public void keyPressed()
-{
-  if(key == 'a' | key == 'A'){
-    sway.turn(-10);
-  }else if(key == 'd' | key == 'D'){
-    sway.turn(10);
-  }else if(key == 'w' | key == 'W'){
-    sway.accelerate(0.3);
-  }else if(key == 's' | key == 'S'){
-    sway.accelerate(-0.3);
-  }else if(key == 'h' | key == 'H'){  
-    sway.hyperspace();
+  public void move(){
+    myX = (int)(Math.random()*500);
+    myY = (int)(Math.random()*500);
   }
 }
