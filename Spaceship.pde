@@ -7,7 +7,7 @@ class Spaceship extends Floater
     myColor= color(255, 255, 255);
     myCenterX = myCenterY = 250;
     myXspeed = myYspeed = 0;
-    myPointDirection = (int)(Math.random()*360);
+    myPointDirection = 0;
   }
   public double getmyXspeed(){return myXspeed;}
   public double getmyYspeed(){return myYspeed;}
